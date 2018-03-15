@@ -1,5 +1,7 @@
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -96,6 +98,16 @@ public class MainPage extends JFrame {
 		JButton btnLogout = new JButton("Logout");
 		btnLogout.setBounds(449, 283, 123, 23);
 		contentPane.add(btnLogout);
+		btnLogout.addActionListener(new ActionListener()
+		{
+			public void actionPerformed(ActionEvent e)
+			{
+				LoginPage lgpge = new LoginPage();
+				dispose();
+				lgpge.setVisible(true);
+			}
+		});
+		
 	}
 
 }
